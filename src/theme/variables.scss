@@ -1,0 +1,202 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #2c3e50,
+  secondary:  #0299AE,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+
+$toolbar-background:color($colors,primary,base);
+$content-background:#efefef;
+
+$toolbar-md-background:$toolbar-background!default;
+$toolbar-ios-background:$toolbar-background!default;
+$toolbar-wp-background:$toolbar-background!default;
+
+ion-content.content {
+  background-color: $content-background!important;
+}
+
+$list-md-background-color: $content-background!default;
+
+//mixins
+@mixin Transitions() { 
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+//custom classes
+.fade-out {
+  bottom: -50px;
+  @include Transitions();
+}
+.fade-in {
+  bottom: 0px;
+  @include Transitions();
+}
+.start-position {
+  display:none;
+  opacity:0;
+}
+.loaded-position {
+  display:block;
+  opacity:0;
+}
+.visibleFooter {
+  @include Transitions();
+  opacity:1;
+}
+.active-button {
+  color: color($colors,primary,base)!important;
+}
+
+.content-list {
+  ion-list {
+    ion-item {
+      div {
+        display:inline-block;
+      }
+      ion-label {
+        white-space: normal;
+      }
+    }
+  }
+}
+
+ion-footer.footer {
+  height: 38px;
+  max-height: 38px;
+  .toolbar-md,.toolbar-ios,.toolbar-wp {
+    min-height: 38px;
+    height: 38px;
+  }
+  ion-icon::before {
+    display: inline-block;
+    font-size: 2.6rem;
+    color: color($colors,light,base);
+    cursor: pointer;
+  }
+}
+ion-list {
+  ion-icon::before {
+    color: color($colors,primary,base);
+  }
+}
+
+ion-label.label {
+  font-size:1.4rem!important;
+}
+
+.input-error {
+  p {
+    color: color($colors,danger,base)!important;
+  }
+}
+ion-header {
+  .toolbar-title {
+    @media screen and (max-width: 720px) {
+      font-size: 1.1em;
+    }
+  }
+}
+
+.description {
+  margin-top:0px;
+}
+h5 {
+  color: color($colors,secondary,base);
+}
+
+.highlight {
+  color: color($colors,secondary,base);
+}
+
+ion-label {
+  h6 {
+    margin-top: 5px!important;
+  }
+}
+

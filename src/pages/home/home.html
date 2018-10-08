@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Dmitri Kokoshkyn
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+ <ion-content> 
+  <ion-grid padding>
+    <ion-row>
+      <ion-col text-left col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 >
+        <p *ngIf="descriptionText" class="description">{{descriptionText}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngIf="displayError">
+        <p>{{errorContent.status}}</p>
+        <p>{{errorContent.statusText}}</p>
+      </ion-col>
+      <ion-col *ngIf="contentData" text-left col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 class="content-list" align-self-center>
+        <h5>Recent Projects</h5>
+        <ion-list *ngFor="let content of contentData | slice :0: pageSize">
+          <ion-item mode="ios">
+            <ion-thumbnail item-start>
+              <img src="{{content.graphic}}">
+              </ion-thumbnail>
+              <h6>{{content.title}}</h6>
+              <p>{{content.text}}</p>
+              <a href="{{content.link}}" target="_blank">{{content.link}}</a>
+          </ion-item>
+        </ion-list>
+        <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+            <ion-infinite-scroll-content *ngIf="showInfiniteScroll" loadingSpinner="bubbles" loadingText="Loading more data...">
+            </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab bottom right #fab>
+      <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+      <ion-fab-list side="left">
+        <button ion-fab (click)="navigateTo('ContactPage', fab)"><ion-icon class="active-button" name="contact"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+      <div text-center>
+        <ion-icon name="logo-linkedin" (click)="redirectUser()">
+        </ion-icon>
+      </div>
+  </ion-toolbar>
+</ion-footer>

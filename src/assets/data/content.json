@@ -1,0 +1,56 @@
+[
+    { 
+        "title": "Pala Interactive",
+        "graphic":"/assets/imgs/pala.png",
+        "text": "I work for an online gaming company as a Front End Dev. Mostly we are building gaming networks, which enable users to play hundreds of casino games. My role is to create directives, pipes, and components for Web, IOS and Android builds. Also, I use a lot of CSS and translate static graphics into responsive and animated sites and apps.",
+        "link": "https://www.canplaycasino.com/"
+    },
+    { 
+        "title": "Sears",
+        "graphic":"/assets/imgs/sears.png",
+        "text": "Helped Sears to build and debug the new Sears.ca site based on Demandware platform and participated in national launch.  Used HTML, ISML, CSS/SASS, JavaScript, TypeScript, Angular, jQuery, Grunt, NPM, Bower, Demandware Platform, Demandware Script, APIGEE, SOAP and RESTFUL Web Services.",
+        "link": "http://www.sears.ca"
+    },
+    { 
+        "title": "TD",
+        "graphic":"/assets/imgs/td.png",
+        "text": "In TD I worked on building the UI for the new TD site with CSS and Javascript/jQuery.",
+        "link": "https://www.td.com/"
+    },
+    { 
+        "title": "Sphere 3D",
+        "graphic":"/assets/imgs/sphere.jpg",
+        "text": "Joined a small, innovative start-up, which now has over 400 employees with offices in Canada, USA and Norway. Was responsible for building web applications and mini sites.  Worked on front end for HTML5 projects for such companies as Corel and Novarad, which enable users to access applications from any device without downloading or installing.  Participated in building company's application (with PHP, SQL, JavaScript and HTML), which enables users to reskin Glassware UI quickly by using bootstrap templates, and enables users to launch Glassware Apps. ",
+        "link": "http://sphere3d.com/"
+    },
+    { 
+        "title": "The Infinity Network",
+        "graphic":"https://via.placeholder.com/80x80",
+        "text": "I built and designed multiple animated banners for a company that creates dating sites.",
+        "link": ""
+    },
+    { 
+        "title": "Consult-Pro",
+        "graphic":"/assets/imgs/consult-pro.png",
+        "text": "Built multiple CSS/HTML/Javascript templates for dental education software.",
+        "link": "http://www.consult-pro.com/"
+    },
+    { 
+        "title": "Tavasys Telecom",
+        "graphic":"https://via.placeholder.com/80x80",
+        "text": "Worked on building new sites and maintaining existing sites.",
+        "link": ""
+    },
+    { 
+        "title": "Insiteful Solutions",
+        "graphic":"/assets/imgs/insiteful.png",
+        "text": "Worked on building and maintaining web sites as a freelancer",
+        "link": ""
+    },
+    { 
+        "title": "York University",
+        "graphic":"/assets/imgs/york.png",
+        "text": "Worked on building banners and web site components for York University's CMS.",
+        "link": "https://www.yorku.ca/index.html"
+    }
+]

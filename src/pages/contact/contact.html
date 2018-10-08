@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contact me</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col text-left col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 >
+          <p class="description">Send me an email at <span class="highlight">d.kokoshkyn@gmail.com</span> or submit the form below.</p>
+          <form novalidate [formGroup]="infoForm" (submit)="onSubmit()">
+              <ion-list>
+                  <ion-item>
+                      <ion-label stacked>*Full Name:</ion-label>
+                      <ion-input type="text" formControlName="fullName"></ion-input>
+                  </ion-item>
+                  <ion-item ion-item *ngIf="fullName.errors?.required && fullName.dirty && fullName.touched" class="input-error">>
+                      <p>Please enter your Name.</p>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label stacked>*Email:</ion-label>
+                      <ion-input type="text" formControlName="email"></ion-input>
+                  </ion-item>
+                  <ion-item *ngIf="(email.invalid && email.dirty && email.touched) || (email.errors?.required && email.dirty && email.touched)" class="input-error">
+                      <p>Please a valid email address.</p>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label stacked>Phone:</ion-label>
+                      <ion-input type="text" formControlName="phoneNumber"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label stacked>*Comments:</ion-label>
+                      <ion-input type="textarea" formControlName="comments"></ion-input>
+                  </ion-item>
+                  <ion-item ion-item *ngIf="comments.errors?.required && comments.dirty && comments.touched" class="input-error">>
+                      <p>Please enter your Comments.</p>
+                  </ion-item>
+              </ion-list>
+              <ion-row>
+                  <ion-col text-left>
+                      <button ion-button [disabled]="infoForm.invalid" color="secondary">Submit</button>
+                  </ion-col>
+              </ion-row>
+          </form>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="emailResponceMessage">
+          <ion-col>
+              {{emailResponceMessage}}
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
