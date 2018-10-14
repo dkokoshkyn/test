@@ -147,11 +147,8 @@ $list-md-background-color: $content-background!default;
 }
 
 ion-footer.footer {
-  height: 38px;
-  max-height: 38px;
   .toolbar-md,.toolbar-ios,.toolbar-wp {
-    min-height: 38px;
-    height: 38px;
+    min-height: 40px!important;
   }
   ion-icon::before {
     display: inline-block;
